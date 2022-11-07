@@ -54,12 +54,13 @@ subTitleSize={SIZES.small}//размер субтитров
             alignItems: "center",
           }}
         >
-          <EthPrice price={data.price} />
+          <EthPrice price={data.price} />{/*принимает 1 параметр цена равна цене */}
+          {/*прямоугольная кнопка */}
           <RectButton
-            minWidth={120}
-            fontSize={SIZES.font}
-            handlePress={() => navigation.navigate("Details", { data })}
-          />
+          minWidth={120}
+          fontSize={SIZES.font}
+          handlePress={() => navigation.navigate("Details", { data })} //функция нажатия обратного вызова для перехода к деталям ,второй параметр объект содержащий все данные 
+        />
         </View>
       </View>
     </View>

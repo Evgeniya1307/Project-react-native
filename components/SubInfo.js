@@ -32,9 +32,26 @@ export const NFTTitle =({ title, subTitle, titleSize, subTitleSize })=>{
 };
 
 //вернуть цену
-export const EthPrice =()=>{
-
-};
+export const EthPrice =({price})=>{
+    return (
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Image
+            source={assets.eth} //лого цены
+            resizeMode="contain"
+            style={{ width: 20, height: 20, marginRight: 2 }}
+          />
+          <Text
+            style={{
+              fontFamily: FONTS.medium,
+              fontSize: SIZES.font,
+              color: COLORS.primary,
+            }}
+          >
+            {price}
+          </Text>
+        </View>
+      );
+    };
 
 const ImageCmp =({ imgUrl, index })=>{
     return (
