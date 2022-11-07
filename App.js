@@ -18,16 +18,16 @@ background:"transparent"//изменяю фон
 
 const App = () => {
   const[loaded]=useFonts({//использую шрифты
-InterBold:require("./assets/Inter-Bold.ttf"),
-InterSemiBold:require("./assets/Inter-SemiBold.ttf"),
-InterMedium:require("./assets/Inter-Medium.ttf"),
-InterRegular:require("./assets/Inter-Regular.ttf"),
-InterLight:require("./assets/Inter-Light.ttf"),
+InterBold:require("./assets/fonts/Inter-Bold.ttf"),
+InterSemiBold:require("./assets/fonts/Inter-SemiBold.ttf"),
+InterMedium:require("./assets/fonts/Inter-Medium.ttf"),
+InterRegular:require("./assets/fonts/Inter-Regular.ttf"),
+InterLight:require("./assets/fonts/Inter-Light.ttf"),
   });
 
-  if(!loaded) return null;{ //если не загружен то null
+  if(!loaded) return null; //если не загружен то null
 
-  }
+
 
   return (
     <NavigationContainer theme={theme}>
