@@ -3,7 +3,7 @@ import { COLORS, SIZES,FONTS, SHADOWS,assets } from '../constants'
 
 
 //главный заголовок его надо внедрить внутрь домашнего заголовка 
-const HomeHeader = () => {
+const HomeHeader = ({onSearch}) => { 
   return (
     <View style={{
       backgroundColor: COLORS.primary,
@@ -76,6 +76,8 @@ const HomeHeader = () => {
         >
         <TextInput
         placeholder='Search NFTs' //в инпуте 
+        style={{ flex: 1 }}
+        onChangeText={onSearch} //при изменение текста поиск 
         />
         </View> 
         </View>
