@@ -5,6 +5,8 @@ import { CircleButton, RectButton, SubInfo, DetailsDesc, DetailsBid, FocusedStat
 
 //детали второй экран 
 const Details = ({route,navigation}) => { //получаю маршрут на котором нахожусь и и навигацию 
+  //console.log(route)
+  const {data} =route.params;//данные равны маршруту
   return (
   <Text>'Details'</Text>
   )
