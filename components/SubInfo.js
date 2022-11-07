@@ -15,9 +15,20 @@ export const EthPrice =()=>{
 
 };
 
-const ImageCmp =()=>{
+const ImageCmp =({ imgUrl, index })=>{
+    return (
+        <Image
+          source={imgUrl}
+          resizeMode="contain"
+          style={{
+            width: 48,
+            height: 48,
+            marginLeft: index === 0 ? 0 : -SIZES.font,// если 1 изображение в строке равен ли индекс 0 то 0 верну иначе -SIZES.font
+          }}
+        />
+      );
+    };
 
-};
 
 //Люди
 export const People = () => {
@@ -25,7 +36,7 @@ export const People = () => {
         <View style={{ flexDirection: "row" }}>
           {[assets.person02, assets.person03, assets.person04].map( //получу индивидуально urlадрес и индекс
             (imgUrl, index) => (
-              <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} />
+              <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} /> //возращаю другой компонент находящий внутри информации 
             )
           )}
         </View>
