@@ -36,7 +36,7 @@ export const People = () => {
         <View style={{ flexDirection: "row" }}>
           {[assets.person02, assets.person03, assets.person04].map( //получу индивидуально urlадрес и индекс
             (imgUrl, index) => (
-              <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} /> //возращаю другой компонент находящий внутри информации 
+              <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} /> //возращаю другой компонент находящийся внутри информации 
             )
           )}
         </View>
@@ -48,13 +48,13 @@ export const EndDate = () => {
     return (
         <View
           style={{
-            paddingHorizontal: SIZES.font,
+            paddingHorizontal: SIZES.font, //отступ по горизонтали
             paddingVertical: SIZES.base,
             backgroundColor: COLORS.white,
             borderRadius: SIZES.font,
             justifyContent: "center",
-            alignItems: "center",
-            ...SHADOWS.light,
+            alignItems: "center", //Ending in по центру 
+            ...SHADOWS.light, //распростронила все тени
             elevation: 1,
             maxWidth: "50%",
           }}
