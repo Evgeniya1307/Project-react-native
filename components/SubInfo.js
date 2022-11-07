@@ -6,8 +6,29 @@ import { SIZES, FONTS, COLORS, SHADOWS, assets } from "../constants";
 //все разные информационные компоненты
 
 
-export const NFTTitle =()=>{
-    
+export const NFTTitle =({ title, subTitle, titleSize, subTitleSize })=>{
+    return (
+        <View>
+          <Text
+            style={{
+              fontFamily: FONTS.semiBold,
+              fontSize: titleSize,
+              color: COLORS.primary,
+            }}
+          >
+            {title}
+          </Text>
+          <Text
+            style={{
+              fontFamily: FONTS.regular,
+              fontSize: subTitleSize,
+              color: COLORS.primary,
+            }}
+          >
+            by {subTitle}
+          </Text>
+        </View>
+      );
 };
 
 //вернуть цену
@@ -55,14 +76,14 @@ export const EndDate = () => {
             justifyContent: "center",
             alignItems: "center", //Ending in по центру 
             ...SHADOWS.light, //распростронила все тени
-            elevation: 1,
+            elevation: 1,//возвышение высота
             maxWidth: "50%",
           }}
         >
           <Text
             style={{
-              fontFamily: FONTS.regular,
-              fontSize: SIZES.small,
+              fontFamily: FONTS.regular, //семейство шрифтов
+              fontSize: SIZES.small,//маленький размер
               color: COLORS.primary,
             }}
           >

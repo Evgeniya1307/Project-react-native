@@ -38,8 +38,32 @@ style={{
 <CircleButton imgUrl={assets.heart} right={10} top={10} />
 </View>
 <SubInfo/>{/*дополнительная инфа */}
+
+<View style={{ width: "100%", padding: SIZES.font }}>
+<NFTTitle
+title={data.name} //заголовок
+subTitle={data.creator}//подзаголовок
+titleSize={SIZES.large}//размер заголовка
+subTitleSize={SIZES.small}//размер субтитров
+/>
+<View
+          style={{
+            marginTop: SIZES.font, //поле сверху
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <EthPrice price={data.price} />
+          <RectButton
+            minWidth={120}
+            fontSize={SIZES.font}
+            handlePress={() => navigation.navigate("Details", { data })}
+          />
+        </View>
+      </View>
     </View>
-  )
-}
+  );
+};
 
 export default NFTCard;
