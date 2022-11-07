@@ -29,4 +29,29 @@ style={{width:24, height:24}}
   );
 };
 
-export default CircleButton; 
+//прямоугольная кнопка 
+export const RectButton = ({ minWidth, fontSize, handlePress, ...props }) => {
+    return (
+      <TouchableOpacity
+        style={{
+          backgroundColor: COLORS.primary,
+          padding: SIZES.small,
+          borderRadius: SIZES.extraLarge,
+          minWidth: minWidth,//минимальное св-во ширины
+          ...props,
+        }}
+        onPress={handlePress}
+      >
+        <Text
+          style={{
+            fontFamily: FONTS.semiBold,
+            fontSize: fontSize,
+            color: COLORS.white,
+            textAlign: "center",
+          }}
+        >
+          Place a bid
+        </Text>
+      </TouchableOpacity>
+    );
+  };
