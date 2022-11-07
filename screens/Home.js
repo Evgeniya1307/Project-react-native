@@ -18,7 +18,7 @@ const Home = () => {
     renderItem={({ item }) => <NFTCard data={item} />}
     keyExtractor={(item) => item.id} // указывает списку использовать идентификаторы для ключей реакции вместо свойства ключа по умолчанию 
     showsVerticalScrollIndicator={false}//вертикальный индикатор прокрутки 
-    ListHeaderComponent={<HomeHeader />}//заголовок отрисова 
+    ListHeaderComponent={<HomeHeader />}//заголовок отрисова даст инфу о вошедшем человеке
     />
     </View>
 

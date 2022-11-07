@@ -71,7 +71,7 @@ const ImageCmp =({ imgUrl, index })=>{
 //Люди
 export const People = () => {
     return (
-        <View style={{ flexDirection: "row" }}>
+        <View style={{ flexDirection: "row" }}> 
           {[assets.person02, assets.person03, assets.person04].map( //получу индивидуально urlадрес и индекс
             (imgUrl, index) => (
               <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} /> //возращаю другой компонент находящийся внутри информации 
