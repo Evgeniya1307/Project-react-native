@@ -18,9 +18,9 @@ justifyContent:'center',
 
 onPress={handlePress}
 >
-{/*сердечки в круглой кнопке */}
+
 <Image
-source={imgUrl}
+source={imgUrl} //сердечки в круглой кнопке 
 resizeMode='contain' //режим изменения размера
 style={{width:24, height:24}}
 /> 

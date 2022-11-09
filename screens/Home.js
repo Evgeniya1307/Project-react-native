@@ -7,6 +7,8 @@ import { NFTCard, HomeHeader, FocusedStatusBar} from '../components';
 
 const Home = () => {
   const [nftData, setNftData] = useState(NFTData);
+ 
+ //поиск
   const handleSearch =(value)=>{
 if(value.length === 0) { //если значение длина равна 0 
   setNftData(NFTData);
@@ -18,7 +20,7 @@ item.name.toLowerCase().includes(value.toLowerCase())
 if (filteredData.length === 0) { //проверяю длинну отфильтрованных данных 
   setNftData(NFTData); //если есть хотябы 1 элемент устанавливаю эти данные
 } else {
-  setNftData(filteredData);
+  setNftData(filteredData);//иначе как неизменный массив
 }
   }
   
@@ -33,7 +35,7 @@ if (filteredData.length === 0) { //проверяю длинну отфильт�
     renderItem={({ item }) => <NFTCard data={item} />}
     keyExtractor={(item) => item.id} // указывает списку использовать идентификаторы для ключей реакции вместо свойства ключа по умолчанию 
     showsVerticalScrollIndicator={false}//вертикальный индикатор прокрутки 
-    ListHeaderComponent={<HomeHeader />}//заголовок отрисова даст инфу о вошедшем человеке
+    ListHeaderComponent={<HomeHeader onSearch={handleSearch} />}//заголовок отрисова даст инфу о вошедшем человеке
     />
     </View>
 
@@ -45,12 +47,13 @@ if (filteredData.length === 0) { //проверяю длинну отфильт�
       left:0,
       zIndex:-1, //позади nfds
     }}>
+    
     <View 
-    style={{ height: 300, backgroundColor: COLORS.primary }} />{/*разделила два экрана на светлый и тёмный */}
+    style={{ height: 300, backgroundColor: COLORS.primary }} />
     <View style={{ flex: 1, backgroundColor: COLORS.white }} />
     </View>
     </View>
-  </SafeAreaView>
+  </SafeAreaView>//{разделила два экрана на светлый и тёмный 
   );
 };
 

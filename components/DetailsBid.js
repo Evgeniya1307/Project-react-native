@@ -30,7 +30,7 @@ import { COLORS, SIZES, FONTS } from "../constants";
             color: COLORS.primary,//начальный
           }}
         >
-          Bid placed by {bid.name} {/*Ставка размещена */}
+          Bid placed by {bid.name} 
         </Text>
         <Text
           style={{
@@ -44,8 +44,8 @@ import { COLORS, SIZES, FONTS } from "../constants";
         </Text>
       </View>
 
-      <EthPrice price={bid.price} />{/*принимает цену ставки  */}
-    </View>
+      <EthPrice price={bid.price} />
+    </View>//принимает цену ставки bid.price
   );
 };
 
