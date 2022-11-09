@@ -15,18 +15,19 @@ const HomeHeader = ({onSearch}) => {
   alignItems: "center",
 }}
 >
-<Image 
+
+<Image //лого pronef 
           source={assets.logo}
           resizeMode="contain"
           style={{ width: 90, height: 25 }}
-        />{/*лого pronef */}
+        />
         <View style={{ width: 45, height: 45 }}>
-        <Image
+        <Image //лого с права в углу
           source={assets.person01}
           resizeMode="contain"
           style={{ width: "100%", height: "100%" }}
-        />{/*лого с права в углу  */}
-        <Image
+        />
+        <Image //внутри лого которое справа галочка в голубом
             source={assets.badge}
             resizeMode="contain"
             style={{
@@ -36,7 +37,7 @@ const HomeHeader = ({onSearch}) => {
               bottom: 0,
               right: 0,
             }}
-          />{/*внутри лого которое справа галочка в голубом */}
+          />
         </View>
 </View>
 
@@ -85,4 +86,4 @@ const HomeHeader = ({onSearch}) => {
   )
 }
 
-export default HomeHeader
+export default HomeHeader;

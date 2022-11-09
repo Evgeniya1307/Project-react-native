@@ -46,12 +46,13 @@ const DetailsDesc = ({ data }) => {
               fontFamily: FONTS.regular,
               lineHeight: SIZES.large,
         }}> {text}</Text>
-        {!readMore && "..."}{/*если не читать дальше то покажу три точки*/}
+        
+        {!readMore && "..."}
         <Text style={{
           color: COLORS.primary,
           fontSize: SIZES.small,
           fontFamily: FONTS.semiBold,
-        }}
+        }}//{!readMore && "..."}если не читать дальше то покажу три точки
         onPress={() => { //фун-ия проверит свойства read more  
           if (!readMore) { //и если не читать дальше
             setText(data.description);//тогда ус-ть текст равным данных
@@ -74,3 +75,9 @@ const DetailsDesc = ({ data }) => {
 };
 
 export default DetailsDesc;
+
+
+
+
+
+

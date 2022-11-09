@@ -37,8 +37,7 @@ style={{
 />
 <CircleButton imgUrl={assets.heart} right={10} top={10} />
 </View>
-<SubInfo/>{/*дополнительная инфа */}
-
+<SubInfo/>
 <View style={{ width: "100%", padding: SIZES.font }}>
 <NFTTitle
 title={data.name} //заголовок
@@ -68,3 +67,6 @@ subTitleSize={SIZES.small}//размер субтитров
 };
 
 export default NFTCard;
+
+
+//<subInfa/>дополнительная инфа 
