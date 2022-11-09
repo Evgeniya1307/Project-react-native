@@ -7,7 +7,16 @@ import { COLORS, SIZES, FONTS } from "../constants";
  const DetailsBid = ({ bid }) => {
   //принимает фактическую ставку
   return (
-    <View>
+    <View 
+    style={{
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginVertical: SIZES.base,
+        paddingHorizontal: SIZES.base *2,
+    }}
+    >
       <Image
         source={bid.image}
         resizeMode="contain"
@@ -35,7 +44,7 @@ import { COLORS, SIZES, FONTS } from "../constants";
         </Text>
       </View>
 
-      <EthPrice price={bid.price} />
+      <EthPrice price={bid.price} />{/*принимает цену ставки  */}
     </View>
   );
 };

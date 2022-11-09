@@ -7,7 +7,22 @@ import { NFTCard, HomeHeader, FocusedStatusBar} from '../components';
 
 const Home = () => {
   const [nftData, setNftData] = useState(NFTData);
+  const handleSearch =(value)=>{
+if(value.length === 0) { //если значение длина равна 0 
+  setNftData(NFTData);
+}
+const filteredData = NFTData.filter((item) => //фильтрую данные получаю доступ к элементу и проверяю яв-ся ли элемент имя на нижний регистр, includes- то прохожусь в значении а затем внижнем регистре
+item.name.toLowerCase().includes(value.toLowerCase())
+);
+
+if (filteredData.length === 0) { //проверяю длинну отфильтрованных данных 
+  setNftData(NFTData); //если есть хотябы 1 элемент устанавливаю эти данные
+} else {
+  setNftData(filteredData);
+}
+  }
   
+
   return(
     <SafeAreaView style={{ flex: 1 }}>
     <FocusedStatusBar backgroundColor={COLORS.primary} />
