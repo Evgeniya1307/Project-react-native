@@ -26,6 +26,12 @@ zIndex:1, //появится над конкретным контентом ко
 }}>
         <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS.dark} />
       </View>
+
+{/*второй список внутри у него данные*/}
+<FlatList
+data={data.bids}//данные ставки
+/>
+
   </SafeAreaView>
   )
 }
