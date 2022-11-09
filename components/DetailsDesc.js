@@ -1,6 +1,5 @@
+import React, { useState } from "react";
 import { View, Text } from "react-native";
-import React from "react";
-import { useState } from "react";
 import { EthPrice, NFTTitle } from "./SubInfo";
 import { COLORS, SIZES, FONTS } from "../constants";
 

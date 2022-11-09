@@ -1,8 +1,9 @@
 //подробности ставки
-import { View, Text, Image } from "react-native";
 import React from "react";
+import { View, Text, Image } from "react-native";
 import { EthPrice } from "./SubInfo";
 import { COLORS, SIZES, FONTS } from "../constants";
+
 
  const DetailsBid = ({ bid }) => {
   //принимает фактическую ставку
