@@ -25,10 +25,10 @@ import { COLORS, SIZES, FONTS } from "../constants";
         </Text>
         <Text
           style={{
-            fontFamily: FONTS.regular,
-            fontSize: SIZES.small - 2,
-            color: COLORS.secondary,
-            marginTop: 3,
+            fontFamily: FONTS.regular,//постоянной
+            fontSize: SIZES.small - 2,//чтобы сделать немного меньше
+            color: COLORS.secondary,//цвет второстепенный
+            marginTop: 3,//верхняя граница
           }}
         >
           {bid.date} {/*дата ставки */}
