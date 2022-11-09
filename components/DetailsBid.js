@@ -24,7 +24,13 @@ import { COLORS, SIZES, FONTS } from "../constants";
         resizeMode="contain"
         style={{ width: 48, height: 48 }} //фото людей делающих ставки
       />
-      <View>
+      <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        paddingHorizontal: SIZES.base,
+      }}
+      >
         <Text
           style={{
             fontFamily: FONTS.semiBold,//полужирный

@@ -1,3 +1,4 @@
+import React from "react";
 import { View, Text, Image, TextInput} from 'react-native'
 import { COLORS, SIZES,FONTS, SHADOWS,assets } from '../constants'
 
@@ -8,7 +9,8 @@ const HomeHeader = ({onSearch}) => {
     <View style={{
       backgroundColor: COLORS.primary,
       padding: SIZES.font,
-    }}>
+    }}
+    >
 <View style={{
   flexDirection: "row",
   justifyContent: "space-between",
