@@ -8,7 +8,25 @@ const Details = ({route,navigation}) => { //получаю маршрут на �
   //console.log(route)
   const {data} =route.params;//данные равны маршруту
   return (
-  <Text>'Details'</Text>
+  <SafeAreaView style={{ flex: 1}}> {/*безопасная зона */}
+  <FocusedStatusBar 
+  barStyle="dark-content"
+  backgroundColor="transparent"
+  translucent={true} //полупрозрачный
+/>
+<View style={{
+  width: '100%',
+  position:'absolute',
+  bottom:0,
+paddingVertical: SIZES.font,
+justifyContent: 'center',
+alignItems: 'center',
+backgroundColor:'rgba(255,255,255, 0.5)',
+zIndex:1, //появится над конкретным контентом который нах-ся под ним
+}}>
+        <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS.dark} />
+      </View>
+  </SafeAreaView>
   )
 }
 
