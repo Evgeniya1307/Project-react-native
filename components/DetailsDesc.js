@@ -47,11 +47,27 @@ const DetailsDesc = ({ data }) => {
               lineHeight: SIZES.large,
         }}> {text}</Text>
         {!readMore && "..."}{/*если не читать дальше то покажу три точки*/}
+        <Text style={{
+          color: COLORS.primary,
+          fontSize: SIZES.small,
+          fontFamily: FONTS.semiBold,
+        }}
+        onPress={() => { //фун-ия проверит свойства read more  
+          if (!readMore) { //и если не читать дальше
+            setText(data.description);//тогда ус-ть текст равным данных
+            setReadMore(true);// а также уст-ть Читать далее
+          } else {
+            setText(data.description.slice(0, 100));//сокращаю текст 
+            setReadMore(false);
+          }
+        }}
+        >
+        {readMore ? " Show Less" : " Read More"}
+        </Text>
+        
+        
+        
         </View>
-
-
-
-
       </View>
     </>
   );

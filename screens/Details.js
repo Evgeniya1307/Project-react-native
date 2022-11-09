@@ -70,7 +70,7 @@ contentContainerStyle={{
 <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} /> {/*рендерю компонент описаний и передаю данные*/}
 
-              {data.bids.length > 0 && (
+              {data.bids.length > 0 && ( //яв-ли длинна битов данных больше 0 в этом случае отображу текс
                 <Text
                   style={{
                     fontSize: SIZES.font,
