@@ -3,6 +3,32 @@ import {  View, Text, SafeAreaView, Image, StatusBar, FlatList } from 'react-nat
 import { COLORS, SIZES, assets, SHADOWS, FONTS } from "../constants";
 import { CircleButton, RectButton, SubInfo, DetailsDesc, DetailsBid, FocusedStatusBar  } from "../components";
 
+
+//заголовок сведений
+const DetailsHeader=({data, navigation})=>{
+<View style={{width:'100%', height:373}}>
+<Image
+source={data.image}
+resizeMode='cover'
+style={{width:'100%', height:'100%'}}
+/>
+
+<CircleButton 
+imgUrl={assets.left}
+handlePress={()=>navigation.goBack()}
+left={15}
+top={StatusBar.currentHeight +10}
+/> {/*для левой кнопки */}
+
+<CircleButton 
+imgUrl={assets.heart}
+right={15}
+top={StatusBar.currentHeight +10}
+/>{/*для сердечка справа */}
+</View>
+}
+
+
 //детали второй экран 
 const Details = ({route,navigation}) => { //получаю маршрут на котором нахожусь и и навигацию 
   //console.log(route)
@@ -30,10 +56,37 @@ zIndex:1, //появится над конкретным контентом ко
 {/*второй список внутри у него данные*/}
 <FlatList
 data={data.bids}//данные ставки
-renderItem={({item})=><DetailsBid/>}//обратным вызовом список кто сделал ставку деструктуризацией item и вернуть компонент DetailsBid/>}
-/>
+renderItem={({item})=><DetailsBid bid={item}/>}//обратным вызовом список кто сделал ставку деструктуризацией item и вернуть компонент DetailsBid который примет предложение bid{item}/>}
 
-  </SafeAreaView>
+keyExtractor={(item)=>item.id}/>
+showsVerticalScrollIndicator={false}{/*вертикальная прокрутка */}
+contentContainerStyle={{
+  paddingBottom: SIZES.extraLarge * 3}}
+  {/*заголовок списка */}
+  ListHeaderComponent={()=>(
+<React.Fragment> {/*Фрагменты позволяют формировать список дочерних элементов, не создавая лишних узлов в DOM */}
+<DetailsHeader data={data} navigation={navigation}/> {/*заголовок сведений*/}
+<SubInfo/>{/*дополнительную инфу */}
+<View style={{ padding: SIZES.font }}>
+              <DetailsDesc data={data} />
+
+              {data.bids.length > 0 && (
+                <Text
+                  style={{
+                    fontSize: SIZES.font,
+                    fontFamily: FONTS.semiBold,
+                    color: COLORS.primary,
+                  }}
+                >
+                  Current Bid {/*текущая ставка */}
+                </Text>
+              )}
+            </View>
+
+</React.Fragment>
+
+  )}
+</SafeAreaView>
   )
 }
 
