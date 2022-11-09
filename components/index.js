@@ -1,7 +1,7 @@
 import HomeHeader from './HomeHeader';
 import FocusedStatusBar from './FocusedStatusBar';
 import NFTCard from './NFTCard';
-import {CircleButton, ReactButton} from './Button';
+import {CircleButton, RectButton} from './Button';
 import DetailsDesc from './DetailsDesc';
 import DetailsBid from './DetailsBid';
 import { SubInfo, People, EndDate, EthPrice, NFTTitle } from './SubInfo';
@@ -12,7 +12,7 @@ export{
     SubInfo,
     People,
     EndDate,
-    ReactButton,
+    RectButton,
     CircleButton,
     EthPrice,
     NFTTitle,

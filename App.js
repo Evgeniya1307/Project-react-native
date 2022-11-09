@@ -17,6 +17,7 @@ const theme = {
 
 const Stack = createStackNavigator();
 
+
 const App = () => {
   const [loaded] = useFonts({
     //использую шрифты
@@ -38,11 +39,11 @@ const App = () => {
         }}
         initialRouteName="Home"
       >
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Details" component={Details} />
+    </Stack.Navigator>
+  </NavigationContainer>
+);
 };
 
 export default App;
