@@ -3,9 +3,9 @@ import { View, Image, Text } from "react-native";
 
 import { SIZES, FONTS, COLORS, SHADOWS, assets } from "../constants";
 
+
+
 //все разные информационные компоненты
-
-
 export const NFTTitle =({ title, subTitle, titleSize, subTitleSize })=>{
     return (
         <View>
