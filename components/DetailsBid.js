@@ -16,9 +16,9 @@ import { COLORS, SIZES, FONTS } from "../constants";
       <View>
         <Text
           style={{
-            fontFamily: FONTS.semiBold,
-            fontSize: SIZES.small,
-            color: COLORS.primary,
+            fontFamily: FONTS.semiBold,//полужирный
+            fontSize: SIZES.small,//маленькицй
+            color: COLORS.primary,//начальный
           }}
         >
           Bid placed by {bid.name} {/*Ставка размещена */}
@@ -31,7 +31,7 @@ import { COLORS, SIZES, FONTS } from "../constants";
             marginTop: 3,
           }}
         >
-          {bid.date}
+          {bid.date} {/*дата ставки */}
         </Text>
       </View>
 
