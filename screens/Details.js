@@ -68,7 +68,7 @@ contentContainerStyle={{
 <DetailsHeader data={data} navigation={navigation}/> {/*заголовок сведений*/}
 <SubInfo/>{/*дополнительную инфу */}
 <View style={{ padding: SIZES.font }}>
-              <DetailsDesc data={data} />
+              <DetailsDesc data={data} /> {/*рендерю компонент описаний и передаю данные*/}
 
               {data.bids.length > 0 && (
                 <Text
