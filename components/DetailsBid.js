@@ -15,7 +15,7 @@ import { COLORS, SIZES, FONTS } from "../constants";
         justifyContent: "space-between",
         alignItems: "center",
         marginVertical: SIZES.base,
-        paddingHorizontal: SIZES.base,
+        paddingHorizontal: SIZES.base *2,
     }}
     key={bid.id}
     >
