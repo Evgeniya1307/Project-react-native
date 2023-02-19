@@ -6,7 +6,7 @@ import { COLORS, SIZES, FONTS } from "../constants";
 
 
  const DetailsBid = ({ bid }) => {
-  //принимает фактическую ставку
+  //takes the actual bid
   return (
     <View 
     style={{
