@@ -33,8 +33,8 @@ import { COLORS, SIZES, FONTS } from "../constants";
       >
         <Text
           style={{
-            fontFamily: FONTS.semiBold,//полужирный
-            fontSize: SIZES.small,//маленькицй
+            fontFamily: FONTS.semiBold,
+            fontSize: SIZES.small,
             color: COLORS.primary,//начальный
           }}
         >
@@ -43,10 +43,10 @@ import { COLORS, SIZES, FONTS } from "../constants";
         <Text
           style={{
             fontFamily: FONTS.regular,//постоянной
-            fontSize: SIZES.small - 2,//чтобы сделать немного меньше
+            fontSize: SIZES.small - 2,
             color: COLORS.secondary,//цвет второстепенный
-            marginTop: 3,//верхняя граница
-          }} //дата ставки bid.date
+            marginTop: 3,
+          }} //bid date bid.date
         >
           {bid.date} 
         </Text>
