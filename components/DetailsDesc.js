@@ -5,8 +5,8 @@ import { COLORS, SIZES, FONTS } from "../constants";
 
 //описание
 const DetailsDesc = ({ data }) => {
-  const [text, setText] = useState(data.description.slice(0, 100)); //сначала это данные описание а затем от 0,100 -первые 100 символов(чтобы показывать не всё целиком)
-  const [readMore, setReadMore] = useState(false); //читать дальше читать больше
+  const [text, setText] = useState(data.description.slice(0, 100)); //first this is the description data and then from 0,100 - the first 100 characters (to show not everything in its entirety)
+  const [readMore, setReadMore] = useState(false); 
 
   return (
     <>
