@@ -56,9 +56,9 @@ const DetailsDesc = ({ data }) => {
               fontFamily: FONTS.semiBold,
             }} //{!readMore && "..."}если не читать дальше то покажу три точки
             onPress={() => {
-              //фун-ия проверит свойства read more
+              //function will check properties read more
               if (!readMore) {
-                //и если не читать дальше
+                //and if you don't read on
                 setText(data.description); //тогда ус-ть текст равным данных
                 setReadMore(true); // а также уст-ть Читать далее
               } else {
