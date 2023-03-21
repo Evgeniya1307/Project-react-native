@@ -53,7 +53,7 @@ import { COLORS, SIZES, FONTS } from "../constants";
       </View>
 
       <EthPrice price={bid.price} />
-    </View>//принимает цену ставки bid.price
+    </View>//accepts the price of the bid.price
   );
 };
 
